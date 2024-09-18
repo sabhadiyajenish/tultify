@@ -3,7 +3,7 @@ import React from "react";
 
 const BackSuperCard = ({
   addBG = true,
-  backImage = "about_back_bed",
+  backImage = "about_back_reverse_bed",
   mainTitle = "",
   title_1 = "",
   title_2 = "",
@@ -12,9 +12,11 @@ const BackSuperCard = ({
   return (
     <>
       <div
-        className={`bg-[url('/images/${
-          addBG ? backImage : "about_back_reverse_bed"
-        }.png')] bg-repeat  bg-cover w-full ${
+        className={`${
+          addBG
+            ? "bg-[url('/images/about_back_bed.png')]"
+            : "bg-[url('/images/about_back_reverse_bed.png')]"
+        } bg-repeat  bg-cover w-full ${
           addBG ? "h-[600px]" : "h-[700px]"
         } mt-[120px] flex`}
       >
