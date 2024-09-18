@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import Link from "next/link";
 
 const Navbar = () => {
   return (
@@ -16,18 +17,30 @@ const Navbar = () => {
           </div>
           <div>
             <ul className="flex gap-[60px]">
-              <li className=" font-semibold text-[18px] leading-[27px] cursor-pointer">
+              <Link
+                href={"/"}
+                className=" font-semibold text-[18px] leading-[27px] cursor-pointer"
+              >
                 Home
-              </li>
-              <li className=" font-semibold text-[18px] leading-[27px] cursor-pointer">
+              </Link>
+              <Link
+                href={"/about"}
+                className=" font-semibold text-[18px] leading-[27px] cursor-pointer"
+              >
                 About
-              </li>
-              <li className=" font-semibold text-[18px] leading-[27px] cursor-pointer">
+              </Link>
+              <Link
+                href={"/product"}
+                className=" font-semibold text-[18px] leading-[27px] cursor-pointer"
+              >
                 Product
-              </li>
-              <li className=" font-semibold text-[18px] leading-[27px] cursor-pointer">
+              </Link>
+              <Link
+                href={"/contact"}
+                className=" font-semibold text-[18px] leading-[27px] cursor-pointer"
+              >
                 Contact Us
-              </li>
+              </Link>
             </ul>
           </div>
           <div>
@@ -51,6 +64,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
+      <hr className="w-full h-[2px]  bg-[#C7C1C2]" />
     </div>
   );
 };

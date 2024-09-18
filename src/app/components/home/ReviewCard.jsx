@@ -1,10 +1,10 @@
 import Image from "next/image";
 import React from "react";
 
-const ReviewCard = ({ index }) => {
+const ReviewCard = ({ index, ...data }) => {
   return (
     <>
-      <div className=" relative" key={index}>
+      <div className="relative h-[450px]" key={index}>
         <div className="w-[395px] h-[320px]  bg-white rounded-[10px]">
           <div className="flex justify-center ">
             {[1, 2, 3, 4, 5].map((item, key) => {
@@ -27,23 +27,23 @@ const ReviewCard = ({ index }) => {
           </div>
           <div className="mt-[30px]">
             <h6 className="font-poppins text-center font-medium italic text-[18px] leading-[27px] text-[#171717] px-5">
-              “I actually had to hunt down the AirBNB we stayed at to find this
-              mattress. We had tried 3 others and they couldn't compete...I'd
-              pay double for this bed. “
+              “{data.quotes} “
             </h6>
             <h3 className="font-libre-franklin text-center font-extrabold text-[20px] leading-[24.24px] text-[#171717] px-5 mt-6">
-              Karie
+              {data.type}
             </h3>
             <p className="font-poppins text-center font-normal text-[15px] leading-[22.5px] text-[#171717] px-5 mt-[6px]">
-              Port Charlotte, Florida
+              {data.name}
             </p>
           </div>
         </div>
-        <div className="flex justify-center">
+        <div className="flex justify-center w-fit">
           <Image
-            src="/images/girl_icon.png"
+            src={`/images/${
+              data.gender === "female" ? "girl_icon" : "boy_icon"
+            }.png`}
             alt="bed_layer"
-            className="w-fit h-fit -mt-[40px]"
+            className="w-[73px] h-[73px] -mt-[40px] ml-[155px]"
             width={0}
             height={0}
             sizes="100vw"

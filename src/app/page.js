@@ -1,10 +1,13 @@
 import Image from "next/image";
-import BannerSection from "./components/BannerSection";
-import CartBox from "./components/CartBox";
-import Mattress from "./components/Mattress";
-import Navbar from "./components/Navbar";
-import CloudTypes from "./components/CloudTypes";
-import CustomerReview from "./components/CustomerReview";
+import BannerSection from "./components/home/BannerSection";
+import CartBox from "./components/home/CartBox";
+import Mattress from "./components/home/Mattress";
+import Navbar from "./components/common/Navbar";
+import CloudTypes from "./components/home/CloudTypes";
+import CustomerReview from "./components/home/CustomerReview";
+import Help_Deciding from "./components/home/Help_Deciding";
+import Footer from "./components/common/Footer";
+import StoryPart from "./components/home/StoryPart";
 
 export default function Home() {
   return (
@@ -66,6 +69,13 @@ export default function Home() {
       </div>
       <CloudTypes />
       <CustomerReview />
+      <div>
+        <StoryPart />
+      </div>
+      <Help_Deciding />
+      <div className="mt-[100px]">
+        <Footer />
+      </div>
     </div>
   );
 }

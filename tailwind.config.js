@@ -18,6 +18,7 @@ module.exports = {
       backgroundImage: {
         "custom-gradient": "linear-gradient(180deg, #7B6E62 0%, #50473E 100%)",
         "custom-gradient1": "linear-gradient(180deg, #7B6E62 0%, #B8A496 100%)",
+        "custom-gradient2": "linear-gradient(180deg, #7B6E62 0%, #D5C0B2 100%)",
       },
     },
   },

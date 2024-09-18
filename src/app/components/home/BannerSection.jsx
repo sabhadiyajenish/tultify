@@ -4,7 +4,6 @@ import React from "react";
 const BannerSection = () => {
   return (
     <>
-      <hr className="w-full h-[2px]  bg-[#C7C1C2]" />
       <div className="bg-[#EAE8E2] w-full">
         <div className="container mx-auto h-fit ">
           <div className="flex justify-between items-center">
@@ -22,7 +21,7 @@ const BannerSection = () => {
             <div className=" mt-[80px] mb-[78px]">
               <Image
                 src="/images/sofa.png"
-                alt="sofa.png"
+                alt="sofa"
                 className="w-[777px] h-fit"
                 width={0}
                 height={0}

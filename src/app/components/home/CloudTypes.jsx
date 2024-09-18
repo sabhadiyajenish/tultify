@@ -58,7 +58,7 @@ const CloudTypes = () => {
             <Image
               src="/images/bed_layer.png"
               alt="bed_layer"
-              className="w-fit h-fit mt-5"
+              className="w-[606px] h-[374px] mt-5"
               width={0}
               height={0}
               sizes="100vw"
