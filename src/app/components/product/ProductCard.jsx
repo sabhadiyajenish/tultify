@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import Link from "next/link";
 
 const ProductCard = ({
   cardImage = "allswell_image",
@@ -47,9 +48,11 @@ const ProductCard = ({
           </p>
         </div>
         <div className="w-full mt-[6px]">
-          <button className="text-white font-poppins font-medium leading-[27px] text-[18px] h-[55px] bg-[#7B6E62] w-full">
-            Add to Cart
-          </button>
+          <Link href={`/product/${index}`}>
+            <button className="text-white font-poppins font-medium leading-[27px] text-[18px] h-[55px] bg-[#7B6E62] w-full">
+              Add to Cart
+            </button>
+          </Link>
         </div>
       </div>
     </>
