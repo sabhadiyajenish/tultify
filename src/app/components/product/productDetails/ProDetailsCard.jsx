@@ -4,6 +4,8 @@ import Link from "next/link";
 
 const ProDetailsCard = () => {
   const [mattress, setMetress] = useState(1);
+  const [mainImage, setMainImage] = useState("prodetails_main_bed");
+
   const [size, setSize] = useState(5);
   const [height, setHeight] = useState(1);
   const [level, setLevel] = useState(1);
@@ -15,9 +17,9 @@ const ProDetailsCard = () => {
           <div className="w-3/5 flex justify-center">
             <div>
               <Image
-                src={`/images/prodetails_main_bed.png`}
+                src={`/images/product/${mainImage}.png`}
                 className="w-[712px] h-[419px] "
-                alt={"prodetails_main_bed"}
+                alt={mainImage}
                 height={0}
                 width={0}
                 sizes="100vw"
@@ -36,12 +38,15 @@ const ProDetailsCard = () => {
                       {" "}
                       <Image
                         src={`/images/product/${item.imgUrl}.png`}
-                        className="w-[102px] h-[69px] "
+                        className={`w-[102px] h-[69px] border-[2px] cursor-pointer ${
+                          item.imgUrl === mainImage ? "border-[#161515]" : null
+                        } `}
                         alt={item.imgUrl}
                         height={0}
                         width={0}
                         sizes="100vw"
                         key={key}
+                        onClick={() => setMainImage(item.imgUrl)}
                       />
                     </>
                   );

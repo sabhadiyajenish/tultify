@@ -1,5 +1,8 @@
 "use client";
 import SubHeader from "@/app/components/about/SubHeader";
+import Footer from "@/app/components/common/Footer";
+import Help_Deciding from "@/app/components/home/Help_Deciding";
+import ProductCard from "@/app/components/product/ProductCard";
 import ProDetailsCard from "@/app/components/product/productDetails/ProDetailsCard";
 import QuestionsCard from "@/app/components/product/productDetails/QuestionsCard";
 import QuestionsLine from "@/app/components/product/productDetails/QuestionsLine";
@@ -13,7 +16,7 @@ const ProductDetailsPage = ({ params }) => {
   return (
     <div className="box-border p-0 m-0">
       <SubHeader title="Mattresses" />
-      <div className="mt-[100px] mb-[100px]">
+      <div className="mt-[100px] ">
         <ProDetailsCard />
         <div className="mt-[80px] container mx-auto">
           <div className="mx-[100px]">
@@ -59,6 +62,24 @@ const ProductDetailsPage = ({ params }) => {
         </div>
         <div className="mt-[100px]">
           <SleepCard />
+        </div>
+        <div className=" container mx-auto mt-[100px]">
+          <h1 className="font-libre-franklin text-center font-extrabold text-[40px] leading-[48.48px] text-[#171717]">
+            Discover other great options
+          </h1>
+          <div className="mt-[50px]">
+            <div className="flex flex-wrap justify-center items-center gap-[30px]">
+              {[{ id: 1 }, { id: 2 }, { id: 3 }].map((item, index) => (
+                <ProductCard key={item.id} index={index} />
+              ))}
+            </div>
+          </div>
+        </div>
+        <div className="mt-[100px]">
+          <Help_Deciding />
+        </div>
+        <div className="mt-[100px]">
+          <Footer />
         </div>
       </div>
     </div>
