@@ -1,7 +1,9 @@
 "use client";
 import SubHeader from "@/app/components/about/SubHeader";
 import ProDetailsCard from "@/app/components/product/productDetails/ProDetailsCard";
+import QuestionsCard from "@/app/components/product/productDetails/QuestionsCard";
 import QuestionsLine from "@/app/components/product/productDetails/QuestionsLine";
+import SleepCard from "@/app/components/product/productDetails/SleepCard";
 import { useParams } from "next/router";
 
 const ProductDetailsPage = ({ params }) => {
@@ -51,6 +53,12 @@ const ProductDetailsPage = ({ params }) => {
         </div>
         <div className="mt-[100px]">
           <QuestionsLine />
+        </div>
+        <div className="">
+          <QuestionsCard />
+        </div>
+        <div className="mt-[100px]">
+          <SleepCard />
         </div>
       </div>
     </div>
