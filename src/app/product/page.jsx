@@ -83,7 +83,7 @@ const Product = () => {
       <div className="mt-[100px]">
         <CustomerReview />
       </div>
-      <div className="mt-[189px]">
+      <div className="mt-[100px]">
         <Help_Deciding />
       </div>
       <div className="mt-[100px]">

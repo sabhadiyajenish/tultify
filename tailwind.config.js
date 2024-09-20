@@ -20,6 +20,9 @@ module.exports = {
         "custom-gradient1": "linear-gradient(180deg, #7B6E62 0%, #B8A496 100%)",
         "custom-gradient2": "linear-gradient(180deg, #7B6E62 0%, #D5C0B2 100%)",
       },
+      boxShadow: {
+        customBoxShadow: "0 5px 25px 1px rgba(0, 0, 0, 0.121)", // equivalent to #0000001F
+      },
     },
   },
   plugins: [],

@@ -17,7 +17,7 @@ const About = () => {
         mainTitle=" If you try your Tuftzy for 365 days and decide to return it..."
         title_1="Call Us at 1-888-425-4854 within your 365-night trial or email returns@Tuftzysleep.com"
         title_2="Tuftzy will help you find a local donation centre for your mattress."
-        title_3="Tuftzy will send you a refund, in whatever form you paid for it.  "
+        title_3="Tuftzy will send you a refund, in whatever form you paid for it."
       />
       <Warranty />
       <AwardWinning />
