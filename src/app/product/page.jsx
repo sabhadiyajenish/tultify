@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import SubHeader from "../components/about/SubHeader";
 import ProductCard from "../components/product/ProductCard";
 import ReactPaginate from "react-paginate";
@@ -10,6 +10,23 @@ import CustomerReview from "../components/home/CustomerReview";
 import Help_Deciding from "../components/home/Help_Deciding";
 import Footer from "../components/common/Footer";
 const Product = () => {
+  // const [currentItemsdata, setCurrentItems] = useState([]);
+
+  // useEffect(() => {
+  //   const fetchItems = async () => {
+  //     try {
+  //       const response = await fetch("https://dummyjson.com/products");
+  //       const data = await response.json();
+  //       // Assuming the API response structure includes a 'products' array
+  //       setCurrentItems(data.products);
+  //     } catch (error) {
+  //       console.error("Error fetching data:", error);
+  //     }
+  //   };
+
+  //   fetchItems();
+  // }, []);
+
   const itemsPerPage = 9;
   const items = [
     { id: 1, banner_Text: "On Sale" },
@@ -53,6 +70,7 @@ const Product = () => {
               key={item.id}
               banner_Text={item.banner_Text}
               index={index}
+              {...item}
             />
           ))}
         </div>
