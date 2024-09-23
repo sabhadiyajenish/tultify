@@ -19,9 +19,10 @@ const TouchCard = ({ addBG = true }) => {
                   : null
               }`}
             >
-              <div className="w-[80px] h-[80px] mx-auto mt-[34px] rounded-[10px] bg-custom-gradient2 flex justify-center items-center ">
-                <FaPhoneAlt className="w-[49px] h-[49px] text-white" />
+              <div className="w-[80px] h-[80px] mx-auto mt-[34px] rounded-[10px] bg-custom-gradient2 flex justify-center items-center transition-transform duration-300 ease-in-out hover:rotate-12">
+                <FaPhoneAlt className="w-[49px] h-[49px] text-white transition-transform duration-300 ease-in-out hover:rotate-12" />
               </div>
+
               <h2 className=" font-extrabold text-[28px] leading-[33.94px] text-center mt-[35px]">
                 Phone
               </h2>
@@ -40,8 +41,8 @@ const TouchCard = ({ addBG = true }) => {
                   : null
               }`}
             >
-              <div className="w-[80px] h-[80px] mx-auto mt-[34px] rounded-[10px] bg-custom-gradient2 flex justify-center items-center ">
-                <MdEmail className="w-[49px] h-[49px] text-white" />
+              <div className="w-[80px] h-[80px] mx-auto mt-[34px] rounded-[10px] bg-custom-gradient2 flex justify-center items-center transition-transform duration-300 ease-in-out hover:rotate-12">
+                <MdEmail className="w-[49px] h-[49px] text-white transition-transform duration-300 ease-in-out hover:rotate-12" />
               </div>
               <h2 className=" font-extrabold text-[28px] leading-[33.94px] text-center mt-[35px]">
                 Email
@@ -61,8 +62,8 @@ const TouchCard = ({ addBG = true }) => {
                   : null
               }`}
             >
-              <div className="w-[80px] h-[80px] mx-auto mt-[34px] rounded-[10px] bg-custom-gradient2 flex justify-center items-center ">
-                <IoLocationSharp className="w-[49px] h-[49px] text-white" />
+              <div className="w-[80px] h-[80px] mx-auto mt-[34px] rounded-[10px] bg-custom-gradient2 flex justify-center items-center transition-transform duration-300 ease-in-out hover:rotate-12">
+                <IoLocationSharp className="w-[49px] h-[49px] text-white transition-transform duration-300 ease-in-out hover:rotate-12" />
               </div>
               <h2 className=" font-extrabold text-[28px] leading-[33.94px] text-center mt-[35px]">
                 Location

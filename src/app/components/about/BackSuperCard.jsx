@@ -36,7 +36,7 @@ const BackSuperCard = ({
                 <Image
                   src={`/images/${addBG ? "sms_chat_icon" : "like_icon"}.png`}
                   alt="sms_chat_icon"
-                  className="w-[49px] h-[49px]"
+                  className="w-[49px] h-[49px] "
                   width={0}
                   height={0}
                   sizes="100vw"

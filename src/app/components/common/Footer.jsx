@@ -26,16 +26,17 @@ const Footer = () => {
                 </div>
               </div>
               <div className="mt-[30px] flex gap-x-4">
-                <div className="w-[44px] h-[44px] bg-[#7B6E62] rounded-[100px] flex justify-center items-center cursor-pointer">
+                <div className="w-[44px] h-[44px] bg-[#7B6E62] rounded-full flex justify-center items-center cursor-pointer transition-transform duration-300 ease-in-out hover:scale-110 hover:bg-[#8C7B6A]">
                   <FaFacebookF className="w-[10px] h-[19.26px] text-white" />
                 </div>
-                <div className="w-[44px] h-[44px] bg-[#7B6E62] rounded-[100px] flex justify-center items-center cursor-pointer">
+
+                <div className="w-[44px] h-[44px] bg-[#7B6E62] rounded-full flex justify-center items-center cursor-pointer transition-transform duration-300 ease-in-out hover:scale-110 hover:bg-[#8C7B6A]">
                   <FaLinkedinIn className="w-[18px] h-[18px] text-white" />
                 </div>
-                <div className="w-[44px] h-[44px] bg-[#7B6E62] rounded-[100px] flex justify-center items-center cursor-pointer">
+                <div className="w-[44px] h-[44px] bg-[#7B6E62] rounded-full flex justify-center items-center cursor-pointer transition-transform duration-300 ease-in-out hover:scale-110 hover:bg-[#8C7B6A]">
                   <FaInstagram className="w-[18.01px] h-[18.01px] text-white" />
                 </div>
-                <div className="w-[44px] h-[44px] bg-[#7B6E62] rounded-[100px] flex justify-center items-center cursor-pointer">
+                <div className="w-[44px] h-[44px] bg-[#7B6E62] rounded-full flex justify-center items-center cursor-pointer transition-transform duration-300 ease-in-out hover:scale-110 hover:bg-[#8C7B6A]">
                   <BsTwitterX className="w-[19.39px] h-[19.81px] text-white" />
                 </div>
               </div>
@@ -56,7 +57,7 @@ const Footer = () => {
                   return (
                     <>
                       <p
-                        className={`text-[#DEC9BB] text-[16px] font-normal leading-[24px] font-poppins cursor-pointer ${
+                        className={`text-[#DEC9BB] hover:text-red-200 text-[16px] font-normal leading-[24px] font-poppins cursor-pointer ${
                           index === 0 ? "mt-[18px]" : "mt-[12px]"
                         }`}
                         key={index}
@@ -81,7 +82,7 @@ const Footer = () => {
                   return (
                     <>
                       <p
-                        className={`text-[#DEC9BB] text-[16px] font-normal leading-[24px] font-poppins cursor-pointer ${
+                        className={`text-[#DEC9BB] hover:text-red-200 text-[16px] font-normal leading-[24px] font-poppins cursor-pointer ${
                           index === 0 ? "mt-[18px]" : "mt-[12px]"
                         }`}
                         key={index}
@@ -108,7 +109,7 @@ const Footer = () => {
                   return (
                     <>
                       <p
-                        className={`text-[#DEC9BB] text-[16px] font-normal leading-[24px] font-poppins cursor-pointer ${
+                        className={`text-[#DEC9BB] hover:text-red-200 text-[16px] font-normal leading-[24px] font-poppins cursor-pointer ${
                           index === 0 ? "mt-[18px]" : "mt-[12px]"
                         }`}
                         key={index}
@@ -131,7 +132,7 @@ const Footer = () => {
                   return (
                     <>
                       <p
-                        className={`text-[#DEC9BB] text-[16px] font-normal leading-[24px] font-poppins cursor-pointer ${
+                        className={`text-[#DEC9BB] hover:text-red-200 text-[16px] font-normal leading-[24px] font-poppins cursor-pointer ${
                           index === 0 ? "mt-[18px]" : "mt-[12px]"
                         }`}
                         key={index}

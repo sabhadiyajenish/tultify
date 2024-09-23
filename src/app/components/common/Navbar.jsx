@@ -1,8 +1,14 @@
+"use client";
+// src/app/components/common/Navbar.jsx
 import Image from "next/image";
-import React from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation"; // Use usePathname from next/navigation
 
 const Navbar = () => {
+  const pathname = usePathname(); // Get the current path
+
+  const isActive = (path) => pathname === path;
+
   return (
     <div>
       <div className="w-full bg-[#EAE8E2]">
@@ -17,30 +23,22 @@ const Navbar = () => {
           </div>
           <div>
             <ul className="flex gap-[60px]">
-              <Link
-                href={"/"}
-                className="font-semibold text-[18px] leading-[27px] cursor-pointer hover:bg-[#C7C1C2] hover:text-[#FFF] transition duration-300 px-2 py-1 rounded"
-              >
-                Home
-              </Link>
-              <Link
-                href={"/about"}
-                className="font-semibold text-[18px] leading-[27px] cursor-pointer hover:bg-[#C7C1C2] hover:text-[#FFF] transition duration-300 px-2 py-1 rounded"
-              >
-                About
-              </Link>
-              <Link
-                href={"/product"}
-                className="font-semibold text-[18px] leading-[27px] cursor-pointer hover:bg-[#C7C1C2] hover:text-[#FFF] transition duration-300 px-2 py-1 rounded"
-              >
-                Product
-              </Link>
-              <Link
-                href={"/contact"}
-                className="font-semibold text-[18px] leading-[27px] cursor-pointer hover:bg-[#C7C1C2] hover:text-[#FFF] transition duration-300 px-2 py-1 rounded"
-              >
-                Contact Us
-              </Link>
+              {["/", "/about", "/product", "/contact"].map((path) => (
+                <li key={path}>
+                  <Link
+                    href={path}
+                    className={`font-semibold text-[18px] leading-[27px] cursor-pointer transition duration-300 px-2 py-1 rounded ${
+                      isActive(path)
+                        ? "bg-[#C7C1C2] text-[#FFF]"
+                        : "hover:bg-[#C7C1C2] hover:text-[#FFF]"
+                    }`}
+                  >
+                    {path === "/"
+                      ? "Home"
+                      : path.charAt(1).toUpperCase() + path.slice(2)}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
           <div>

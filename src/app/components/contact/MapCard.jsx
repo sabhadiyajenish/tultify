@@ -35,7 +35,7 @@ const MapCard = () => {
             <FaMapMarkerAlt
               style={{ marginRight: "8px", fontSize: "20px", color: "#FF6347" }}
             />
-            Your Location
+            Native Infotech
           </div>
         </Popup>
       </Marker>
