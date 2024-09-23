@@ -1,12 +1,10 @@
 "use client";
 import React, { useState } from "react";
-import { IoMdAdd, IoMdRemove } from "react-icons/io";
-import { Collapse, Box } from "@mui/material";
-import Accordion from "@mui/material/Accordion";
-import AccordionSummary from "@mui/material/AccordionSummary";
-import AccordionDetails from "@mui/material/AccordionDetails";
 import Accordian from "./Accordian";
+
 const QuestionsLine = () => {
+  const [expanded, setExpanded] = useState(false);
+
   const questions = [
     {
       question: "Does The One foam mattress sleep hot?",
@@ -33,6 +31,10 @@ const QuestionsLine = () => {
     },
   ];
 
+  const handleChange = (index) => (event, isExpanded) => {
+    setExpanded(isExpanded ? index : false);
+  };
+
   return (
     <div className="w-full bg-[#EAE8E2] h-auto">
       <div className="container mx-auto">
@@ -46,7 +48,13 @@ const QuestionsLine = () => {
                 key={index}
                 className="w-[1028px] mx-auto mt-5 rounded-[10px]"
               >
-                <Accordian index={index} />
+                <Accordian
+                  index={index}
+                  question={item.question}
+                  answer={item.answer}
+                  expanded={expanded}
+                  handleChange={handleChange}
+                />
               </div>
             ))}
           </div>

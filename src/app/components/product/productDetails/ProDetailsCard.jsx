@@ -36,19 +36,21 @@ const ProDetailsCard = () => {
                 ].map((item, key) => {
                   return (
                     <>
-                      {" "}
-                      <Image
-                        src={`/images/product/${item.imgUrl}.png`}
-                        className={`w-[102px] h-[69px] border-[2px] cursor-pointer ${
-                          item.imgUrl === mainImage ? "border-[#161515]" : null
-                        } `}
-                        alt={item.imgUrl}
-                        height={0}
-                        width={0}
-                        sizes="100vw"
-                        key={key}
-                        onClick={() => setMainImage(item.imgUrl)}
-                      />
+                      <div key={key}>
+                        <Image
+                          src={`/images/product/${item.imgUrl}.png`}
+                          className={`w-[102px] h-[69px] border-[2px] cursor-pointer ${
+                            item.imgUrl === mainImage
+                              ? "border-[#161515]"
+                              : null
+                          } `}
+                          alt={item.imgUrl}
+                          height={0}
+                          width={0}
+                          sizes="100vw"
+                          onClick={() => setMainImage(item.imgUrl)}
+                        />
+                      </div>
                     </>
                   );
                 })}
@@ -83,7 +85,6 @@ const ProDetailsCard = () => {
                 ].map((item, key) => {
                   return (
                     <>
-                      {" "}
                       <div className="w-1/5 flex items-center" key={key}>
                         <div className="w-[125px]">
                           <Image
