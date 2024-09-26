@@ -5,15 +5,16 @@ import Link from "next/link";
 const ProductCard = ({
   cardImage = "allswell_image",
   banner_Text = false,
-  price = "$123",
+  // price = "$123",
   last_price = "$123",
   index,
+  ...data
 }) => {
   return (
     <>
       <div className="w-[394px] border  bg-[#EAE8E2] p-5 relative" key={index}>
         <Image
-          src={`/images/${cardImage}.png`}
+          src={data?.thumbnail ? data?.thumbnail : `/images/${cardImage}.png`}
           className="w-full h-[199px] "
           alt={cardImage}
           height={0}
@@ -26,29 +27,38 @@ const ProductCard = ({
           </p>
         )}
         <h2 className=" font-extrabold font-libre-franklin text-[24px] leading-[29.09px] text-[#171717] mt-5 py-1">
-          Saatva Classic
+          {data?.title
+            ? `${data.title.substring(0, 20)}${
+                data.title.length > 20 ? "..." : ""
+              }`
+            : "Saatva Classic"}
         </h2>
         <p className=" font-poppins font-normal leading-[24px] text-[16px] mt-[10px] pr-5">
-          Includes mattress (One or Dream), Foundation, and Mattress Protector.
+          {data?.description
+            ? `${data.description.substring(0, 70)}${
+                data.description.length > 70 ? "..." : ""
+              }`
+            : "Includes mattress (One or Dream), Foundation, and Mattress Protector."}
         </p>
         <p className="text-black font-poppins font-normal leading-[24px] text-[16px] mt-[12px]">
-          <span className="text-black mr-1"> ✔</span> Foundation
+          <span className="text-black mr-1"> ✔</span>{" "}
+          {data?.tags ? data?.tags[0] : "Foundation"}
         </p>
         <p className="text-black font-poppins font-normal leading-[24px] text-[16px] mt-[12px]">
-          <span className="text-black mr-1"> ✔</span> Waterproof Mattress
-          Protector
+          <span className="text-black mr-1"> ✔</span>{" "}
+          {data?.tags ? data?.tags[1] : "Waterproof Mattress Protector"}
         </p>
         <hr className="w-full h-[2px] bg-[#7B6E62] mt-[15px]" />
         <div className="flex gap-x-5 items-center mt-[20px]">
           <h1 className="text-black font-poppins font-bold leading-[60px] text-[40px]  py-1">
-            {price}
+            ${data?.price ? data?.price : "123"}
           </h1>
           <p className="text-[#7B6E62] font-poppins font-medium leading-[36px] text-[24px]  py-1">
             {last_price}
           </p>
         </div>
         <div className="w-full mt-[6px]">
-          <Link href={`/product/${index}`}>
+          <Link href={`/product/${data?.id}`}>
             <button className="text-white font-poppins font-medium leading-[27px] text-[18px] h-[55px] bg-[#7B6E62] w-full">
               Add to Cart
             </button>

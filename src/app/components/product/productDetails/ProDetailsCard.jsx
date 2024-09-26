@@ -3,7 +3,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 import Link from "next/link";
 
-const ProDetailsCard = () => {
+const ProDetailsCard = ({ ...data }) => {
   const [mattress, setMetress] = useState(1);
   const [mainImage, setMainImage] = useState("prodetails_main_bed");
 
@@ -119,7 +119,7 @@ const ProDetailsCard = () => {
           <div className="w-2/5">
             <div className="w-full">
               <h1 className="font-libre-franklin font-extrabold text-[40px] leading-[48.48px] text-[#171717]">
-                Saatva Classic Mattress
+                {data?.title}
               </h1>
               <p className=" font-poppins font-normal text-[16px] leading-[24px] text-[#171717] mt-[18px]">
                 America's best-selling online luxury innerspring
@@ -150,10 +150,10 @@ const ProDetailsCard = () => {
               </div>
               <div className="flex mt-[30px] items-center gap-x-5">
                 <h1 className="font-poppins font-bold text-[40px] leading-[60px] text-[#171717]">
-                  $1,781
+                  ${data?.price}
                 </h1>
                 <h3 className="font-poppins font-medium text-[24px] leading-[36px] text-[#171717] opacity-50">
-                  <del> $1,981</del>
+                  <del> ${Number((data?.price / 2) * 3).toFixed(1)}</del>
                 </h3>
                 <button className="py-1 px-3 font-poppins font-medium text-[13px] leading-[19px] text-white bg-[#007C01] rounded-[5px]">
                   Saved $200
