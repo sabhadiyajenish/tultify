@@ -1,16 +1,34 @@
 "use client";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 
-const ProDetailsCard = ({ ...data }) => {
+const ProDetailsCard = ({ productId }) => {
   const [mattress, setMetress] = useState(1);
   const [mainImage, setMainImage] = useState("prodetails_main_bed");
 
   const [size, setSize] = useState(5);
   const [height, setHeight] = useState(1);
   const [level, setLevel] = useState(1);
+  const [data, setCurrentItems] = useState([]);
 
+  useEffect(() => {
+    const fetchItems = async () => {
+      try {
+        const response = await fetch(
+          `https://dummyjson.com/products/${productId}`
+        );
+        const data = await response.json();
+        // Assuming the API response structure includes a 'products' array
+        setCurrentItems(data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchItems();
+    console.log(">>>>>>>>>>>>>>", productId);
+  }, [productId]);
   return (
     <>
       <div className="container mx-auto flex ">

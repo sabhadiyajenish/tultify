@@ -58,7 +58,7 @@ const ProductCard = ({
           </p>
         </div>
         <div className="w-full mt-[6px]">
-          <Link href={`/product/${data?.id}`}>
+          <Link href={`/product/${data?.id ? data?.id : index}`}>
             <button className="text-white font-poppins font-medium leading-[27px] text-[18px] h-[55px] bg-[#7B6E62] w-full">
               Add to Cart
             </button>
