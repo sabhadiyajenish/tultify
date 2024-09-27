@@ -32,7 +32,7 @@ const ProductDetailsPage = ({ params }) => {
     };
 
     fetchItems();
-  }, []);
+  }, [params.productId]);
   console.log("one product data<<<<<<<<<", currentItemsdata);
 
   return (

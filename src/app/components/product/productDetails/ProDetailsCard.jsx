@@ -121,8 +121,8 @@ const ProDetailsCard = ({ ...data }) => {
               <h1 className="font-libre-franklin font-extrabold text-[40px] leading-[48.48px] text-[#171717]">
                 {data?.title}
               </h1>
-              <p className=" font-poppins font-normal text-[16px] leading-[24px] text-[#171717] mt-[18px]">
-                America's best-selling online luxury innerspring
+              <p className="font-poppins font-normal text-[16px] leading-[24px] text-[#171717] mt-[18px]">
+                America&apos;s best-selling online luxury innerspring
               </p>
               <div className="flex items-center gap-x-4 ">
                 <div className="flex">
@@ -259,7 +259,7 @@ const ProDetailsCard = ({ ...data }) => {
                             } `}
                             onClick={() => setHeight(item.id)}
                           >
-                            {item.title}"
+                            {item.title}
                           </button>
                         </>
                       );
