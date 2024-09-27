@@ -9,7 +9,7 @@ const Accordian = ({ question, answer, index, expanded, handleChange }) => {
     <Accordion
       expanded={expanded === index}
       onChange={handleChange(index)}
-      className="bg-[#7B6E62] rounded-[10px]"
+      className="rounded-[10px] accordian_main_class"
     >
       <AccordionSummary
         aria-controls={`panel${index}-content`}

@@ -46,7 +46,7 @@ const QuestionsLine = () => {
             {questions.map((item, index) => (
               <div
                 key={index}
-                className="w-[1028px] mx-auto mt-5 rounded-[10px]"
+                className="w-[1028px] mx-auto mt-5 rounded-[10px] bg-[#7B6E62]"
               >
                 <Accordian
                   index={index}
